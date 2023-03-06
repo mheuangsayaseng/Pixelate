@@ -15,3 +15,15 @@ function makeRow () {
 
 const button = document.getElementById("add-row")
 button.addEventListener('click', makeRow)
+
+
+grid.addEventListener('click', colorize)
+function colorize(click){
+    const target = event.target
+    if(target.className.length){
+        target.className = ''
+    }else {
+        target.className = 'red'
+    }
+    
+}
